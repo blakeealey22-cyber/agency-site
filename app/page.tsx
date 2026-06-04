@@ -1031,7 +1031,7 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
-    className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/80 backdrop-blur-2xl p-4 md:p-6"
+    className="fixed inset-0 z-[100] overflow-y-auto bg-black/80 backdrop-blur-xl p-4 md:p-6"
     onClick={() => setActiveProject(null)}
   >
     <motion.div
@@ -1047,7 +1047,7 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
       {/* CLOSE BUTTON */}
       <button
         onClick={() => setActiveProject(null)}
-        className="absolute right-6 top-6 z-20 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-xl"
+        className="absolute right-4 md:right-6 top-4 md:top-6 z-20 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur-xl"
       >
         Close
       </button>

@@ -87,7 +87,7 @@ useEffect(() => {
   };
   if (loading) {
   return (
-    <main className="flex h-screen items-center justify-center overflow-hidden bg-[#050505]">
+    <main className="flex h-screen items-center justify-center overflow-hidden bg-[#0a0a0a]">
       <div className="relative flex flex-col items-center">
         
         {/* GLOW */}
@@ -136,7 +136,7 @@ useEffect(() => {
   return (
     <main
   onMouseMove={handleMouseMove}
-  className="min-h-screen bg-[#050505] text-white overflow-hidden relative"
+  className="min-h-screen bg-[#0b0b0b] text-white overflow-hidden relative"
 >
   <SmoothScroll />
   <motion.div
@@ -175,7 +175,20 @@ useEffect(() => {
   {/* BACKGROUND GLOWS */}
       {/* NAVBAR */}
 <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-6xl">
-  <div className="rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-2xl px-4 md:px-6 py-3 md:py-4 flex items-center justify-between shadow-2xl">
+  <div className="rounded-full border border-white/10 bg-white/[5] backdrop-blur-2xl px-4 md:px-6 py-3 md:py-4 flex items-center justify-between shadow-2xl">
+
+  <motion.div
+  animate={{
+    y: [0, -40, 0],
+    x: [0, 20, 0],
+  }}
+  transition={{
+    duration: 12,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+  className="absolute top-[30%] left-[20%] h-[300px] w-[300px] rounded-full bg-cyan-500/10 blur-[120px]"
+/>
 
 {/* MOBILE MENU */}
 {mobileMenuOpen && (
@@ -186,7 +199,7 @@ useEffect(() => {
     transition={{
       duration: 0.3,
     }}
-    className="fixed top-24 left-1/2 z-40 w-[92%] max-w-6xl -translate-x-1/2 rounded-[32px] border border-white/10 bg-black/70 backdrop-blur-2xl p-6 md:hidden"
+    className="fixed top-24 left-1/2 z-40 w-[92%] max-w-6xl -translate-x-1/2 rounded-[32px] border border-white/10 bg-black/70 backdrop-blur-3xl p-6 md:hidden"
   >
     <div className="flex flex-col gap-6 text-lg text-white/80">
       <a
@@ -299,9 +312,9 @@ whileTap={{
 </div>
       {/* BACKGROUND GLOWS */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-[-250px] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] bg-purple-600/30 rounded-full blur-[220px]" />
+        <div className="absolute top-[-250px] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] bg-purple-600/30 rounded-full blur-[260px]" />
 
-        <div className="absolute bottom-[-300px] left-[10%] w-[900px] h-[900px] bg-blue-500/20 rounded-full blur-[220px]" />
+        <div className="absolute bottom-[-300px] left-[10%] w-[900px] h-[900px] bg-blue-500/20 rounded-full blur-[260px]" />
 
         <div className="absolute top-[20%] right-[-250px] w-[700px] h-[700px] bg-fuchsia-500/20 rounded-full blur-[180px]" />
       </div>
@@ -400,7 +413,7 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
   className="relative hidden lg:block"
 >
             {/* MAIN CARD */}
-            <div className="rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-2xl p-6 shadow-2xl">
+            <div className="rounded-[40px] border border-white/10 bg-white/[0.05] backdrop-blur-3xl p-6 shadow-2xl">
               <div className="rounded-[32px] border border-white/10 bg-[#0d0d0d] p-8">
                 
                 {/* TOP DOTS */}
@@ -550,28 +563,28 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
 
     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5">
 
-      <div className="rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6">
+      <div className="rounded-[28px] border border-white/10 bg-white/[0.05] backdrop-blur-xl p-6">
         <p className="text-4xl font-semibold">+214%</p>
         <p className="mt-3 text-white/50">
           Average lead increase from modern redesigns.
         </p>
       </div>
 
-      <div className="rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6">
+      <div className="rounded-[28px] border border-white/10 bg-white/[0.05] backdrop-blur-xl p-6">
         <p className="text-4xl font-semibold">24hr</p>
         <p className="mt-3 text-white/50">
           Average response time for client communication.
         </p>
       </div>
 
-      <div className="rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6">
+      <div className="rounded-[28px] border border-white/10 bg-white/[0.05] backdrop-blur-xl p-6">
         <p className="text-4xl font-semibold">12+</p>
         <p className="mt-3 text-white/50">
           Industries supported with premium website systems.
         </p>
       </div>
 
-      <div className="rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6">
+      <div className="rounded-[28px] border border-white/10 bg-white/[0.05] backdrop-blur-xl p-6">
         <p className="text-4xl font-semibold">Mobile</p>
         <p className="mt-3 text-white/50">
           Optimized experiences designed for every device.
@@ -656,9 +669,12 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
           }}
           viewport={{ once: true }}
           whileHover={{
-            y: -10,
-          }}
-          className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-2xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05]"
+  y: -12,
+  rotateX: 3,
+  rotateY: -3,
+  scale: 1.01,
+}}
+          className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.05] p-8 backdrop-blur-2xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05]"
         >
           {/* GLOW */}
           <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-br from-white/[0.06] via-transparent to-purple-500/[0.08]" />
@@ -726,7 +742,12 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
     </motion.div>
 
     {/* PROJECT GRID */}
-    <div className="grid lg:grid-cols-2 gap-8 mt-20">
+    <div
+  className="grid lg:grid-cols-2 gap-8 mt-20"
+  style={{
+    perspective: "2000px",
+  }}
+>
 
       {/* PROJECT 1 */}
       <motion.div
@@ -739,7 +760,7 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
   y: -12,
   scale: 1.01,
 }}
-        className="group relative overflow-hidden rounded-[40px] cursor-pointer border border-white/10 bg-white/[0.03] backdrop-blur-2xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_0_80px_rgba(168,85,247,0.12)]"
+        className="group relative overflow-hidden rounded-[40px] cursor-pointer border border-white/10 bg-white/[0.05] backdrop-blur-3xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_0_80px_rgba(168,85,247,0.12)]"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -806,7 +827,7 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
   y: -12,
   scale: 1.01,
 }}
-        className="group relative overflow-hidden rounded-[40px] cursor-pointer border border-white/10 bg-white/[0.03] backdrop-blur-2xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_0_80px_rgba(168,85,247,0.12)]"
+        className="group relative overflow-hidden rounded-[40px] cursor-pointer border border-white/10 bg-white/[0.05] backdrop-blur-3xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05] hover:shadow-[0_0_80px_rgba(168,85,247,0.12)]"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -914,9 +935,12 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
           }}
           viewport={{ once: true }}
           whileHover={{
-            y: -10,
-          }}
-          className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-2xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05]"
+  y: -12,
+  rotateX: 3,
+  rotateY: -3,
+  scale: 1.01,
+}}
+          className="group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.05] p-8 backdrop-blur-2xl transition-all duration-500 hover:border-white/20 hover:bg-white/[0.05]"
         >
           {/* GLOW */}
           <div className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-br from-white/[0.06] via-transparent to-blue-500/[0.08]" />
@@ -961,7 +985,7 @@ className="transition-all duration-300 px-8 py-4 rounded-full bg-white text-blac
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8 }}
     viewport={{ once: true }}
-    className="max-w-[1400px] mx-auto overflow-hidden rounded-[48px] border border-white/10 bg-white/[0.03] backdrop-blur-2xl relative"
+    className="max-w-[1400px] mx-auto overflow-hidden rounded-[48px] border border-white/10 bg-white/[0.05] backdrop-blur-3xl relative"
   >
     {/* GLOW */}
     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-blue-500/10" />
